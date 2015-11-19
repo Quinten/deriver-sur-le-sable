@@ -8,6 +8,7 @@ $(document).ready(function(){
         'success': function (data) {
             websitedata = data;
             alert(websitedata);
-        }
+        },
+        'error': function (a,b,c) { alert(b); }
     });
 });
