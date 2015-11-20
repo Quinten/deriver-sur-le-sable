@@ -9,6 +9,7 @@ $(document).ready(function(){
             websitedata = data;
             alert(websitedata);
             console.log(websitedata);
+            window.location.hash = 'beire';
         },
         'error': function (a,b,c) { alert(b); }
     });
