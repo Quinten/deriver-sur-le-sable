@@ -1,6 +1,4 @@
-{
-"items": [
-{ 
+{"items": [{ 
 "title": "Lorem ipsum 1",
 "content": "Lorem ipsum et dolor sit amet",
 "image": "http://placehold.it/1024x1024?text=artwork1",
@@ -20,6 +18,4 @@
 "content": "Lorem ipsum et dolor sit amet",
 "image": "http://placehold.it/1024x1024?text=artwork4",
 "hash": "four"
-}
-]
-}
+}]}
