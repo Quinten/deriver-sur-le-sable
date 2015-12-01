@@ -15,4 +15,9 @@ $(document).ready(function(){
         'error': function (a,b,c) { alert(b); }
     });
     */
+    
+    $('nav a').click(function (e) {
+        $('.page').removeClass('active');
+        $($(this).attr('href')).addClass('active');
+    });
 });
