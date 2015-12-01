@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    /*
     var websitedata = null;
     $.ajax({
         'async': true,
@@ -13,4 +14,5 @@ $(document).ready(function(){
         },
         'error': function (a,b,c) { alert(b); }
     });
+    */
 });
