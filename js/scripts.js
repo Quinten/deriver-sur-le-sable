@@ -1,6 +1,9 @@
 $(document).ready(function(){
     
-    alert(location.hash);
+    if (location.hash != '') {
+        $('.page').removeClass('active');
+        $(location.hash).addClass('active');
+    }
 
     $('nav a').click(function (e) {
         $('.page').removeClass('active');
