@@ -11,3 +11,7 @@ body {
 .page.active {
     display: block;
 }
+
+nav a.active {
+    color: #f00;
+}
