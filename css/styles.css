@@ -5,11 +5,14 @@ body {
 }
 
 .page {
-    display: none;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    position: absolute;
 }
 
 .page.active {
-    display: block;
+    opacity: 1;
 }
 
 nav a.active {
@@ -19,4 +22,11 @@ nav a.active {
 img {
     max-width: 100%;
     height: auto;
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+}
+
+.page.active img {
+    opacity: 1;
 }
