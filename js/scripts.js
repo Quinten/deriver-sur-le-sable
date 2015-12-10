@@ -1,19 +1,25 @@
+/*
+ * Navigation script
+ */
+
+function changeActiveTo(hash) {
+    $('*').removeClass('active');
+    $(hash).addClass('active');
+    $('a[href="' + hash + '"]').addClass('active');
+}
+
 $(document).ready(function(){
 
     if (location.hash == '') {
         location.hash = '#home'; // default is #home
     }
 
-    $('*').removeClass('active');
-    $(location.hash).addClass('active');
-    $('a[href="' + location.hash + '"]').addClass('active');
+    changeActiveTo(location.hash);
 
     $('a').click(function (e) {
         var href = $(this).attr('href');
         if (href.charAt(0) == '#') {
-            $('*').removeClass('active');
-            $(href).addClass('active');
-            $(this).addClass('active');
+            changeActiveTo(href);
         }
     });
 
