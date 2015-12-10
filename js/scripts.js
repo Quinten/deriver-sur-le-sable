@@ -8,6 +8,10 @@ function changeActiveTo(hash) {
     $('a[href="' + hash + '"]').addClass('active');
 }
 
+window.onpopstate = function (e) {
+    changeActiveTo(location.hash);
+}
+
 $(document).ready(function(){
 
     if (location.hash == '') {
