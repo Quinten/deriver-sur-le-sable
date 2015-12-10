@@ -1,11 +1,13 @@
 $(document).ready(function(){
-    
-    if (location.hash != '') {
-        $('.page').removeClass('active');
-        $(location.hash).addClass('active');
-        $('nav a').removeClass('active');
-        $('nav a[href="' + location.hash + '"]').addClass('active');
+
+    if (location.hash == '') {
+        location.hash = '#home'; // default is #home
     }
+
+    $('.page').removeClass('active');
+    $(location.hash).addClass('active');
+    $('nav a').removeClass('active');
+    $('nav a[href="' + location.hash + '"]').addClass('active');
 
     $('nav a').click(function (e) {
         $('.page').removeClass('active');
