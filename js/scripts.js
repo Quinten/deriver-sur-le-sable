@@ -4,17 +4,15 @@ $(document).ready(function(){
         location.hash = '#home'; // default is #home
     }
 
-    $('.page').removeClass('active');
+    $('*').removeClass('active');
     $(location.hash).addClass('active');
-    $('a').removeClass('active');
     $('a[href="' + location.hash + '"]').addClass('active');
 
     $('a').click(function (e) {
         var href = $(this).attr('href');
         if (href.charAt(0) == '#') {
-            $('.page').removeClass('active');
+            $('*').removeClass('active');
             $(href).addClass('active');
-            $('a').removeClass('active');
             $(this).addClass('active');
         }
     });
