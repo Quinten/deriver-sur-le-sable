@@ -6,14 +6,17 @@ $(document).ready(function(){
 
     $('.page').removeClass('active');
     $(location.hash).addClass('active');
-    $('nav a').removeClass('active');
-    $('nav a[href="' + location.hash + '"]').addClass('active');
+    $('a').removeClass('active');
+    $('a[href="' + location.hash + '"]').addClass('active');
 
-    $('nav a').click(function (e) {
-        $('.page').removeClass('active');
-        $($(this).attr('href')).addClass('active');
-        $('nav a').removeClass('active');
-        $(this).addClass('active');
+    $('a').click(function (e) {
+        var href = $(this).attr('href');
+        if (href.charAt(0) == '#') {
+            $('.page').removeClass('active');
+            $(href).addClass('active');
+            $('a').removeClass('active');
+            $(this).addClass('active');
+        }
     });
 
     $('img').each(function (index) {
