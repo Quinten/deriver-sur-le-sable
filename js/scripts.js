@@ -13,4 +13,9 @@ $(document).ready(function(){
         $('nav a').removeClass('active');
         $(this).addClass('active');
     });
+
+    $('img').each(function (index) {
+        var ran = Math.random();
+        $(this).attr('style', '-webkit-transition-delay: '+ran+'s; transition-delay: '+ran+'s;');
+    });
 });
