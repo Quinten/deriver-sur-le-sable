@@ -2,16 +2,18 @@ body {
     background: #ffffff;
     font-family: 'Nova Mono', monospace;
     color: #4f4d4b;
+    margin: 0;
 }
 
-.page {
+section {
     opacity: 0;
     -webkit-transition: opacity .5s;
     transition: opacity .5s;
     position: absolute;
+    overflow: hidden;
 }
 
-.page.active {
+section.active {
     opacity: 1;
 }
 
@@ -25,8 +27,11 @@ img {
     opacity: 0;
     -webkit-transition: opacity 2s;
     transition: opacity 2s;
+    float: left;
+    display: block;
+    margin: 0;
 }
 
-.page.active img {
+section.active img {
     opacity: 1;
 }
