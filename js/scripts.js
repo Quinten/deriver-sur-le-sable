@@ -23,7 +23,12 @@ $(document).ready(function(){
     $('a').click(function (e) {
         var href = $(this).attr('href');
         if (href.charAt(0) == '#') {
-            changeActiveTo(href);
+            e.preventDefault();
+            location.hash = href;
+            $('*').removeClass('active');
+            setTimeout(function () {
+                changeActiveTo(href);
+            }, 500);
         }
     });
 
