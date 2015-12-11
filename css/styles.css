@@ -9,14 +9,13 @@ section {
     opacity: 0;
     -webkit-transition: opacity .5s;
     transition: opacity .5s;
-    position: static;
+    position: absolute;
     overflow: hidden;
     z-index: 0;
 }
 
 section.active {
     opacity: 1;
-    position: absolute;
     z-index: 1;
 }
 
