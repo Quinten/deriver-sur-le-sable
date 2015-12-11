@@ -24,10 +24,10 @@ $(document).ready(function(){
         var href = $(this).attr('href');
         if (href.charAt(0) == '#') {
             e.preventDefault();
-            //location.hash = href;
             history.pushState({hash: href}, "Dummy Title", href);
             $('*').removeClass('active');
             setTimeout(function () {
+                window.scrollTo(0, 0);
                 changeActiveTo(href);
             }, 500);
         }
