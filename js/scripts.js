@@ -14,12 +14,6 @@ window.onpopstate = function (e) {
 
 $(document).ready(function(){
 
-    if (location.hash == '') {
-        location.hash = '#home'; // default is #home
-    }
-
-    changeActiveTo(location.hash);
-
     $('a').click(function (e) {
         var href = $(this).attr('href');
         if (href.charAt(0) == '#') {
@@ -33,8 +27,23 @@ $(document).ready(function(){
         }
     });
 
+    if (location.hash == '') {
+        location.hash = '#home'; // default is #home
+    }
+
+    var nLoaded = 0;
+    var totalImg = $('img').length;
+    function checkLoaded(e) {
+        nLoaded++;
+        if (nLoaded === totalImg) {
+            changeActiveTo(location.hash);
+        }
+    }
+
     $('img').each(function (index) {
         var ran = Math.random();
         $(this).attr('style', '-webkit-transition-delay: '+ran+'s; transition-delay: '+ran+'s;');
+        this.onload = checkLoaded;
     });
+
 });
