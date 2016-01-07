@@ -34,12 +34,12 @@ $(document).ready(function(){
     var nLoaded = 0;
     var totalImg = $('img').length;
     function checkLoaded(e) {
+        $(this).addClass($(this).width() + 'x' + $(this).height());
         nLoaded++;
         if (nLoaded === totalImg) {
             changeActiveTo(location.hash);
         }
     }
-
     $('img').each(function (index) {
         var ran = Math.random();
         $(this).attr('style', '-webkit-transition-delay: '+ran+'s; transition-delay: '+ran+'s;');
