@@ -5,7 +5,7 @@
 function changeActiveTo(hash) {
     $('*').removeClass('active');
     $('section').hide();
-    $('section.active').show();
+    $(hash).show();
     $(hash).addClass('active');
     $('a[href="' + hash + '"]').addClass('active');
 }
