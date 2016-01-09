@@ -4,10 +4,10 @@
 
 function changeActiveTo(hash) {
     $('*').removeClass('active');
-    $(hash).addClass('active');
-    $('a[href="' + hash + '"]').addClass('active');
     $('section').hide();
     $('section.active').show();
+    $(hash).addClass('active');
+    $('a[href="' + hash + '"]').addClass('active');
 }
 
 window.onpopstate = function (e) {
