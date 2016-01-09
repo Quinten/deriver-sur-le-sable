@@ -6,8 +6,10 @@ function changeActiveTo(hash) {
     $('*').removeClass('active');
     $('section').hide();
     $(hash).show();
-    $(hash).addClass('active');
-    $('a[href="' + hash + '"]').addClass('active');
+    setTimout(function () {
+        $(hash).addClass('active');
+        $('a[href="' + hash + '"]').addClass('active');
+    }, 125);
 }
 
 window.onpopstate = function (e) {
