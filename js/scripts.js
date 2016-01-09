@@ -7,7 +7,7 @@ function changeActiveTo(hash) {
     $(hash).addClass('active');
     $('a[href="' + hash + '"]').addClass('active');
     $('section').hide();
-$('section').hide();
+    $('section.active').show();
 }
 
 window.onpopstate = function (e) {
