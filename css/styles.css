@@ -3,6 +3,8 @@ body {
     font-family: 'Anonymous Pro', monospace;
     color: #4f4d4b;
     margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 section {
@@ -32,6 +34,21 @@ img {
     float: left;
     display: block;
     margin: 0;
+}
+
+section.active img {
+    opacity: 1;
+}
+
+div {
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+    float: left;
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 1em;
 }
 
 section.active img {
