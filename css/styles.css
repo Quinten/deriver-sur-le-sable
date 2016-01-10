@@ -7,6 +7,11 @@ body {
     line-height: 1.5;
 }
 
+p {
+    padding: 0;
+    margin: 0 0 1em 0;
+}
+
 section {
     opacity: 0;
     -webkit-transition: opacity .5s;
@@ -19,10 +24,6 @@ section {
 section.active {
     opacity: 1;
     z-index: 1;
-}
-
-nav a.active {
-    color: #f00;
 }
 
 img {
