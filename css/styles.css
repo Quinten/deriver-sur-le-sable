@@ -40,12 +40,14 @@ section.active img {
 
 .w256 {
     width: 50%;
+    max-width: none;
 }
 
 .w512,
 .w1024,
 .w2048 {
     width: 100%;
+    max-width: none;
 }
 
 @media screen and (min-width: 512px) {
