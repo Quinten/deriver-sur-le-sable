@@ -51,7 +51,7 @@ div {
     padding: 1em;
 }
 
-section.active img {
+section.active div {
     opacity: 1;
 }
 
