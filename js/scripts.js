@@ -38,7 +38,7 @@ $(document).ready(function(){
     var nLoaded = 0;
     var totalImg = $('img').length;
     function checkLoaded(e) {
-        $(this).addClass($(this).width() + 'x' + $(this).height());
+        $(this).addClass('w' + $(this).width() + ' h' + $(this).height());
         nLoaded++;
         if (nLoaded === totalImg) {
             changeActiveTo(location.hash);
