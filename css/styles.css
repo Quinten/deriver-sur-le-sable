@@ -37,3 +37,39 @@ img {
 section.active img {
     opacity: 1;
 }
+
+.w256 {
+    width: 50%;
+}
+
+.w512,
+.w1024,
+.w2048 {
+    width: 100%;
+}
+
+@media screen and (min-width: 512px) {
+
+    .w256 {
+        width: 25%;
+    }
+
+    .w512 {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .w256 {
+        width: 12.5%;
+    }
+
+    .w512 {
+        width: 25%;
+    }
+
+    .w1024 {
+        width: 50%;
+    }
+}
