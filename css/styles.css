@@ -12,6 +12,12 @@ p {
     margin: 0 0 1em 0;
 }
 
+#preloader #progress {
+    width: 0%;
+    height: 48px;
+    background: #4f4d4b;
+}
+
 section {
     opacity: 0;
     -webkit-transition: opacity .5s;
@@ -26,7 +32,7 @@ section.active {
     z-index: 1;
 }
 
-img {
+section img {
     max-width: none;
     height: auto;
     opacity: 0;
@@ -41,7 +47,7 @@ section.active img {
     opacity: 1;
 }
 
-div {
+section div {
     opacity: 0;
     -webkit-transition: opacity 1s;
     transition: opacity 1s;

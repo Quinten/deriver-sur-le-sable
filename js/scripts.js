@@ -40,7 +40,10 @@ $(document).ready(function(){
     function checkLoaded(e) {
         $(this).addClass('w' + $(this).width() + ' h' + $(this).height());
         nLoaded++;
+        var percentageLoaded = 100 * nLoaded / totalImg;
+        $('#progress').css('width', percentageLoaded + '%');
         if (nLoaded === totalImg) {
+            $('#preloader').remove();
             changeActiveTo(location.hash);
         }
     }
